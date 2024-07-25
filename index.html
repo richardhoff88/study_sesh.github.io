@@ -1,21 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Study Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1>Starting our website</h1> 
-        <p>Richard and Constant</p>
-    </main>
-	<script src="index.js"></script>
-  </body>
-</html>
+    <title>Study Tracker Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
 
-<!-- test -->
-<!-- test -->
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 1em;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        .feature {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 1em;
+            padding: 2em;
+            flex-basis: 45%;
+            text-align: center;
+        }
+
+        .feature h2 {
+            color: #4CAF50;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            overflow: hidden;
+            margin: 1em 0;
+        }
+
+        .progress-bar div {
+            background-color: #4CAF50;
+            height: 20px;
+            width: 50%;
+            border-radius: 25px 0 0 25px;
+        }
+
+        .reward-icon {
+            font-size: 2em;
+            color: #FFD700;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Study Tracker Website</h1>
+        <p><a href="https://richardhoff88.github.io/study_sesh.github.io/" target="_blank" style="color:white;">Visit the Website</a></p>
+    </header>
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#progress">Progress</a>
+        <a href="#community">Community</a>
+        <a href="#rewards">Rewards</a>
+    </nav>
+    <div class="container">
+        <div class="feature" id="features">
+            <h2>Eye-Tracking and Facial Recognition</h2>
+            <p>AI-powered focus verification to ensure users stay on task.</p>
+        </div>
+        <div class="feature">
+            <h2>Study Session Management</h2>
+            <p>Provide and access study overviews and summaries for efficient learning.</p>
+        </div>
+        <div class="feature">
+            <h2>Study Session Types</h2>
+            <p>Customized sessions with AI recommendations such as Pomodoro monitoring.</p>
+        </div>
+        <div class="feature">
+            <h2>AI-Powered Summarization and Planning</h2>
+            <p>AI summarizes notes and helps with goal setting and schedule creation.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="feature" id="progress">
+            <h2>Progress Tracking</h2>
+            <div class="progress-bar">
+                <div></div>
+            </div>
+            <p>Visual progress bar to track your study goals.</p>
+        </div>
+        <div class="feature">
+            <h2>Community and Collaboration</h2>
+            <p>Forums for users to share knowledge and support each other.</p>
+        </div>
+        <div class="feature">
+            <h2>Voice Interaction</h2>
+            <p>Hands-free operation with voice commands.</p>
+        </div>
+        <div class="feature" id="rewards">
+            <h2>Rewards System</h2>
+            <i class="fas fa-award reward-icon"></i>
+            <p>Earn rewards based on your study goals and progress.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Study Tracker. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
