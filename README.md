@@ -9,8 +9,8 @@ Link to website: [https://richardhoff88.github.io/study_sesh.github.io/](https:/
 - **Focus Verification**: Use AI-powered eye-tracking and facial recognition to ensure users are focused during study sessions. Detects distractions, such as using phone, and pauses the session with a warning to refocus and continue session.
 
 ### Study Session Management
-- **Session Overview**: Users provide an overview description of what they plan to study at the start of a new topic. This overview can be accessed in future sessions without re-entering the information.
-- **Session Summary**: At the end of each study session, users write a brief summary of what they studied, what they learned, and their next steps (within the topic).
+- **Session Overview**: Users provide an overview description of what they plan to study at the start of a new topic. This overview can be accessed in future sessions without re-entering the information. New topics can be organized into different Project folders that can be accessed at later times.  Each Project will have an AI-powered timeline based on the user's preferences to meet user-specified study goals.
+- **Session Summary**: When users log in, they are prompted to give a brief overview of what they are studying for a new Project.  For each project, the user will be prompted at the start of every study session about the specifics of what they plan to study in that session. At the end of each study session, users are then prompted briefly about what they studied during the session, what they learned, and their next steps (within the topic). Depending on user preferences, there can be a follow-up quiz that assesses session-specific material to ensure legitimate logging.
 
 ### Study session types
 There can be multiple/personalized sessions (3x 1hr with 10 min breaks etc...)
