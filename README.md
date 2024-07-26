@@ -1,6 +1,6 @@
 # Study Tracker Website
 
-Link to website: [https://constantinced.github.io/study_sesh.github.io/](https://constantinced.github.io/study_sesh.github.io/)
+Link to website: [https://richardhoff88.github.io/study_sesh.github.io/](https://richardhoff88.github.io/study_sesh.github.io/)
 
 
 ## Features
