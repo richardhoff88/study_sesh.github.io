@@ -206,138 +206,137 @@
 	<script src="index.js"></script>
   </body> -->
 
+  
   <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Study Session Tracker</title>
-      <style>
-          body {
-              font-family: Arial, sans-serif;
-              background-color: #e08787;
-              margin: 0;
-              padding: 0;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 100vh;
-              overflow: hidden;
-          }
-          .container {
-              background-color: rgb(232, 171, 171);
-              padding: 20px;
-              border-radius: 10px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-              max-width: 400px;
-              width: 100%;
-              opacity: 0;
-              animation: fadeIn 1s forwards;
-          }
-          @keyframes fadeIn {
-              to {
-                  opacity: 1;
-              }
-          }
-          h1 {
-              text-align: center;
-              color: #333;
-          }
-          .question {
-              display: none;
-              opacity: 0;
-          }
-          .question.active {
-              display: block;
-              animation: fadeIn 0.5s forwards;
-          }
-          .hidden {
-              display: none;
-          }
-          label {
-              display: block;
-              margin-top: 10px;
-              font-weight: bold;
-              color: #555;
-          }
-          input[type="text"] {
-              border: none;
-              border-bottom: 1px solid #ccc;
-              width: calc(100% - 20px);
-              margin: 20px 10px;
-              padding: 10px;
-              font-size: 16px;
-              outline: none;
-          }
-          button {
-              display: block;
-              width: 100%;
-              padding: 10px;
-              margin-top: 20px;
-              background-color: #4CAF50;
-              color: white;
-              border: none;
-              border-radius: 5px;
-              cursor: pointer;
-              font-size: 16px;
-          }
-          button:hover {
-              background-color: #45a049;
-              transform: scale(1.05);
-          }
-      </style>
-  </head>
-  <body>
-      <div class="container">
-          <h1>Welcome to Your Study Session</h1>
-          <form id="studyForm">
-              <div class="question active">
-                  <label for="subject">What subject are you studying today?</label>
-                  <input type="text" id="subject" name="subject" required onkeypress="handleKeyPress(event)">
-              </div>
-  
-              <div class="question">
-                  <label for="topics">What specific topics or chapters are you focusing on? The more specific the better.</label>
-                  <input type="text" id="topics" name="topics" required onkeypress="handleKeyPress(event)">
-              </div>
-  
-              <div class="question">
-                  <label for="goals">What are your study goals for this session? The more specific the better.</label>
-                  <input type="text" id="goals" name="goals" required onkeypress="handleKeyPress(event)">
-                  <button type="submit">Start Studying</button>
-              </div>
-          </form>
-      </div>
-  
-      <script>
-          let currentQuestion = 0;
-          const questions = document.querySelectorAll('.question');
-  
-          function nextQuestion() {
-              if (currentQuestion < questions.length - 1) {
-                  questions[currentQuestion].classList.remove('active');
-                  currentQuestion++;
-                  questions[currentQuestion].classList.add('active');
-                  scrollToQuestion();
-              }
-          }
-  
-          function handleKeyPress(event) {
-              if (event.key === 'Enter') {
-                  event.preventDefault();
-                  nextQuestion();
-              }
-          }
-  
-          function scrollToQuestion() {
-              questions[currentQuestion].scrollIntoView({ behavior: 'smooth' });
-          }
-  
-          document.getElementById('studyForm').addEventListener('submit', function(event) {
-              event.preventDefault();
-              window.location.href = 'study-tools.html';
-          });
-      </script>
-  </body>
-  </html>
-  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Session Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e08787;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background-color: rgb(232, 171, 171);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            display: none;
+            opacity: 0;
+        }
+        .question.active {
+            display: block;
+            animation: fadeIn 0.5s forwards;
+        }
+        .hidden {
+            display: none;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"] {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            width: calc(100% - 20px);
+            margin: 20px 10px;
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Study Session</h1>
+        <form id="studyForm">
+            <div class="question active">
+                <label for="subject">What subject are you studying today?</label>
+                <input type="text" id="subject" name="subject" required onkeypress="handleKeyPress(event)">
+            </div>
+
+            <div class="question">
+                <label for="topics">What specific topics or chapters are you focusing on? The more specific the better.</label>
+                <input type="text" id="topics" name="topics" required onkeypress="handleKeyPress(event)">
+            </div>
+
+            <div class="question">
+                <label for="goals">What are your study goals for this session? The more specific the better.</label>
+                <input type="text" id="goals" name="goals" required onkeypress="handleKeyPress(event)">
+                <button type="submit">Start Studying</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll('.question');
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                questions[currentQuestion].classList.remove('active');
+                currentQuestion++;
+                questions[currentQuestion].classList.add('active');
+                scrollToQuestion();
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                nextQuestion();
+            }
+        }
+
+        function scrollToQuestion() {
+            questions[currentQuestion].scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('studyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'study-tools.html';
+        });
+    </script>
+</body>
+</html>
