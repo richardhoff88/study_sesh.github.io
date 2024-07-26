@@ -1,0 +1,343 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Study Tracker Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2em 1em;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid orange;
+            animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange }
+        }
+
+        header p a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 1em 0;
+        }
+
+        nav a {
+            color: white;
+            padding: 1em 2em;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 3em 1em;
+        }
+
+        .feature {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 1em;
+            padding: 2em;
+            flex-basis: 45%;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h2 {
+            color: #3498db;
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .feature p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            overflow: hidden;
+            margin: 1em 0;
+        }
+
+        .progress-bar div {
+            background-color: #3498db;
+            height: 20px;
+            width: 50%;
+            border-radius: 25px 0 0 25px;
+        }
+
+        .reward-icon {
+            font-size: 2em;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Study Tracker Website</h1>
+        <p><a href="https://richardhoff88.github.io/study_sesh.github.io/" target="_blank">Visit the Website</a></p>
+    </header>
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#progress">Progress</a>
+        <a href="#community">Community</a>
+        <a href="#rewards">Rewards</a>
+    </nav>
+    <div class="container">
+        <div class="feature" id="features">
+            <h2>Eye-Tracking and Facial Recognition</h2>
+            <p>AI-powered focus verification to ensure users stay on task.</p>
+        </div>
+        <div class="feature">
+            <h2>Study Session Management</h2>
+            <p>Provide and access study overviews and summaries for efficient learning.</p>
+        </div>
+        <div class="feature">
+            <h2>Study Session Types</h2>
+            <p>Customized sessions with AI recommendations such as Pomodoro monitoring.</p>
+        </div>
+        <div class="feature">
+            <h2>AI-Powered Summarization and Planning</h2>
+            <p>AI summarizes notes and helps with goal setting and schedule creation.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="feature" id="progress">
+            <h2>Progress Tracking</h2>
+            <div class="progress-bar">
+                <div></div>
+            </div>
+            <p>Visual progress bar to track your study goals.</p>
+        </div>
+        <div class="feature">
+            <h2>Community and Collaboration</h2>
+            <p>Forums for users to share knowledge and support each other.</p>
+        </div>
+        <div class="feature">
+            <h2>Voice Interaction</h2>
+            <p>Hands-free operation with voice commands.</p>
+        </div>
+        <div class="feature" id="rewards">
+            <h2>Rewards System</h2>
+            <i class="fas fa-award reward-icon"></i>
+            <p>Earn rewards based on your study goals and progress.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Study Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+    <title>My Website</title>
+    <title>Study Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <h1>Welcome to My Website</h1>  
+        <h1>Starting our website</h1> 
+        <p>Richard and Constant</p>
+    </main>
+	<script src="index.js"></script>
+  </body> -->
+
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Session Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e08787;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background-color: rgb(232, 171, 171);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            display: none;
+            opacity: 0;
+        }
+        .question.active {
+            display: block;
+            animation: fadeIn 0.5s forwards;
+        }
+        .hidden {
+            display: none;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"] {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            width: calc(100% - 20px);
+            margin: 20px 10px;
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Study Session</h1>
+        <form id="studyForm">
+            <div class="question active">
+                <label for="subject">What subject are you studying today?</label>
+                <input type="text" id="subject" name="subject" required onkeypress="handleKeyPress(event)">
+            </div>
+
+            <div class="question">
+                <label for="topics">What specific topics or chapters are you focusing on? The more specific the better.</label>
+                <input type="text" id="topics" name="topics" required onkeypress="handleKeyPress(event)">
+            </div>
+
+            <div class="question">
+                <label for="goals">What are your study goals for this session? The more specific the better.</label>
+                <input type="text" id="goals" name="goals" required onkeypress="handleKeyPress(event)">
+                <button type="submit">Start Studying</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll('.question');
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                questions[currentQuestion].classList.remove('active');
+                currentQuestion++;
+                questions[currentQuestion].classList.add('active');
+                scrollToQuestion();
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                nextQuestion();
+            }
+        }
+
+        function scrollToQuestion() {
+            questions[currentQuestion].scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('studyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'study-tools.html';
+        });
+    </script>
+</body>
+</html>
