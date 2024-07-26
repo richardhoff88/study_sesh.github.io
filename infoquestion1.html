@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Study Tracker</title>
+    <title>Study Session Tracker - Info Question</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: #1b1b2f url('future-artificial-intelligence.png') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #1b1b2f;
+            color: #e0e0e0;
             margin: 0;
             padding: 0;
             display: flex;
@@ -25,14 +25,39 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             max-width: 600px;
             width: 100%;
-            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
         h1 {
+            text-align: center;
             color: #e0e0e0;
         }
         p {
-            color: #e0e0e0;
+            color: #a0a0a0;
+            font-size: 14px;
+            text-align: center;
             margin-bottom: 20px;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            resize: none;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
         }
         .button {
             display: block;
@@ -55,9 +80,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Study Tracker</h1>
-        <p>Our mission is to help you study effectively by using the best tools available. Let's get started by creating a new study topic.</p>
-        <a href="infoquestion1.html" class="button">Create a New Study Topic</a>
+        <h1>Please provide an overview of the topic you want to study</h1>
+        <p>The more detail you provide the more personalized the experience will be. We may ask you more specific questions inquiring your knowledge on specific subjects relevant to the topic you wish to learn.</p>
+        <div class="input-container">
+            <textarea placeholder="Enter your overview here..."></textarea>
+            <a href="question1.html" class="button">Next</a>
+        </div>
     </div>
 </body>
 </html>
