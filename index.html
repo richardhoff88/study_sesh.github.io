@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Session Tracker - Question 1</title>
+    <title>Welcome to Study Tracker</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
     <style>
         body {
@@ -23,26 +23,18 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+            text-align: center;
         }
         h1 {
-            text-align: center;
             color: #e0e0e0;
         }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        p {
+            color: #e0e0e0;
+            margin-bottom: 20px;
         }
-        .buttons a {
+        .button {
             display: block;
             width: 100%;
             padding: 10px;
@@ -55,7 +47,7 @@
             font-size: 16px;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .buttons a:hover {
+        .button:hover {
             background-color: #e43f5a;
             transform: scale(1.05);
         }
@@ -63,13 +55,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>How will you be studying?</h1>
-        <div class="buttons">
-            <a href="question2.html">Computer</a>
-            <a href="question2.html">iPad</a>
-            <a href="question2.html">Notebook</a>
-            <a href="question2.html">Book</a>
-        </div>
+        <h1>Welcome to Study Tracker</h1>
+        <p>Our mission is to help you study effectively by using the best tools available. Let's get started by creating a new study topic.</p>
+        <a href="question1.html" class="button">Create a New Study Topic</a>
     </div>
 </body>
 </html>
