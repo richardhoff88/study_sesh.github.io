@@ -216,7 +216,7 @@
       <style>
           body {
               font-family: Arial, sans-serif;
-              background-color: #d47c7c;
+              background-color: #f4f4f4;
               margin: 0;
               padding: 0;
               display: flex;
@@ -226,28 +226,18 @@
               overflow: hidden;
           }
           .container {
-              background-color: rgb(233, 177, 177);
+              background-color: white;
               padding: 20px;
               border-radius: 10px;
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
               max-width: 400px;
               width: 100%;
-              position: relative;
+              opacity: 0;
+              animation: fadeIn 1s forwards;
           }
           @keyframes fadeIn {
-              from {
-                  opacity: 0;
-              }
               to {
                   opacity: 1;
-              }
-          }
-          @keyframes fadeOut {
-              from {
-                  opacity: 1;
-              }
-              to {
-                  opacity: 0;
               }
           }
           h1 {
@@ -255,11 +245,6 @@
               color: #333;
           }
           .question {
-              position: absolute;
-              width: 100%;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
               display: none;
               opacity: 0;
           }
@@ -267,15 +252,14 @@
               display: block;
               animation: fadeIn 0.5s forwards;
           }
-          .question.exiting {
-              animation: fadeOut 0.5s forwards;
+          .hidden {
+              display: none;
           }
           label {
               display: block;
               margin-top: 10px;
               font-weight: bold;
               color: #555;
-              text-align: center;
           }
           input[type="text"] {
               border: none;
@@ -285,7 +269,6 @@
               padding: 10px;
               font-size: 16px;
               outline: none;
-              text-align: center;
           }
           button {
               display: block;
@@ -302,45 +285,28 @@
           button:hover {
               background-color: #45a049;
           }
-          .controls {
-              display: flex;
-              justify-content: space-between;
-              margin-top: 10px;
-          }
-          .controls button {
-              background-color: #ccc;
-              color: black;
-              width: 48%;
-          }
-          .controls button:hover {
-              background-color: #bbb;
-          }
       </style>
   </head>
   <body>
       <div class="container">
           <h1>Welcome to Your Study Session</h1>
           <form id="studyForm">
-              <div class="question active" id="question-0">
+              <div class="question active">
                   <label for="subject">What subject are you studying today?</label>
                   <input type="text" id="subject" name="subject" required onkeypress="handleKeyPress(event)">
               </div>
   
-              <div class="question" id="question-1">
+              <div class="question">
                   <label for="topics">What specific topics or chapters are you focusing on?</label>
                   <input type="text" id="topics" name="topics" required onkeypress="handleKeyPress(event)">
               </div>
   
-              <div class="question" id="question-2">
+              <div class="question">
                   <label for="goals">What are your study goals for this session?</label>
                   <input type="text" id="goals" name="goals" required onkeypress="handleKeyPress(event)">
                   <button type="submit">Start Studying</button>
               </div>
           </form>
-          <div class="controls">
-              <button type="button" onclick="prevQuestion()">Previous</button>
-              <button type="button" onclick="nextQuestion()">Next</button>
-          </div>
       </div>
   
       <script>
@@ -350,24 +316,9 @@
           function nextQuestion() {
               if (currentQuestion < questions.length - 1) {
                   questions[currentQuestion].classList.remove('active');
-                  questions[currentQuestion].classList.add('exiting');
-                  setTimeout(() => {
-                      questions[currentQuestion].classList.remove('exiting');
-                      currentQuestion++;
-                      questions[currentQuestion].classList.add('active');
-                  }, 500);
-              }
-          }
-  
-          function prevQuestion() {
-              if (currentQuestion > 0) {
-                  questions[currentQuestion].classList.remove('active');
-                  questions[currentQuestion].classList.add('exiting');
-                  setTimeout(() => {
-                      questions[currentQuestion].classList.remove('exiting');
-                      currentQuestion--;
-                      questions[currentQuestion].classList.add('active');
-                  }, 500);
+                  currentQuestion++;
+                  questions[currentQuestion].classList.add('active');
+                  scrollToQuestion();
               }
           }
   
@@ -376,6 +327,10 @@
                   event.preventDefault();
                   nextQuestion();
               }
+          }
+  
+          function scrollToQuestion() {
+              questions[currentQuestion].scrollIntoView({ behavior: 'smooth' });
           }
       </script>
   </body>
