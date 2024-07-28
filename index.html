@@ -61,3 +61,67 @@
     </div>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Tracker</h1>
+        <form id="studyForm" method="POST" action="submit.php">
+            <label for="studyMethod">Study Method:</label>
+            <input type="text" id="studyMethod" name="studyMethod" required>
+
+            <label for="otherStudyMethod">Other Study Method:</label>
+            <input type="text" id="otherStudyMethod" name="otherStudyMethod">
+
+            <label for="cameraConsent">Consent to use camera for monitoring?</label>
+            <select id="cameraConsent" name="cameraConsent" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="screenConsent">Consent to use screen recording for monitoring?</label>
+            <select id="screenConsent" name="screenConsent" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="studyDescription">Description of what you want to study:</label>
+            <textarea id="studyDescription" name="studyDescription" rows="4" required></textarea>
+
+            <label for="currentState">Where are you at right now in this topic?</label>
+            <textarea id="currentState" name="currentState" rows="4" required></textarea>
+
+            <label for="studyFrequency">How many times a week do you plan to work on this topic?</label>
+            <select id="studyFrequency" name="studyFrequency" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="otherStudyFrequency">Specify the number of times a week:</label>
+            <input type="text" id="otherStudyFrequency" name="otherStudyFrequency">
+
+            <label for="studyDays">What days do you plan to study?</label>
+            <input type="text" id="studyDays" name="studyDays">
+
+            <label for="studyTimes">What times do you plan to study?</label>
+            <input type="text" id="studyTimes" name="studyTimes">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
